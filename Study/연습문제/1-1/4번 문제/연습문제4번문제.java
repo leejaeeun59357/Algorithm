@@ -1,4 +1,4 @@
-class Solution4 {
+class 연습문제4번문제 {
     public int solution(String s) {
         int answer = -1;
 

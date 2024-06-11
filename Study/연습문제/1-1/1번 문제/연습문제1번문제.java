@@ -1,4 +1,4 @@
-class Solution {
+class 연습문제1번문제 {
     public int solution(int n) {
         int answer = 0;
 
