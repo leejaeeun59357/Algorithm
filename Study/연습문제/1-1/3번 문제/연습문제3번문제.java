@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-class Solution3 {
+class 연습문제3번문제 {
     public int solution(int[] A) {
         ArrayList<Integer> arr = new ArrayList<>();
 
