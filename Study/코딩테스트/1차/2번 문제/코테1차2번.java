@@ -19,12 +19,3 @@ class 코테1차2번 {
         return nResult / rResult;
     }
 }
-
-class Main {
-    public static void main(String[] args) {
-        String[] names =
-                {"제로", "베이스", "자바", "스쿨", "자바", "베이스", "베이스", "백엔드", "화이팅"};
-
-        System.out.println(new 코테1차2번().solution(names));
-    }
-}
