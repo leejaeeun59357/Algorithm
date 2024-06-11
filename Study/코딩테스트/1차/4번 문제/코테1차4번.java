@@ -32,11 +32,3 @@ class 코테1차4번 {
         }
     }
 }
-
-class Main {
-    public static void main(String[] args) {
-        int n = 4, i = 1, j = 3;
-        System.out.println(new 코테1차4번()
-                .solution(n, i, j));
-    }
-}
