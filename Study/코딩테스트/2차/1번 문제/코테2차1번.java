@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class 코테2차1번 {
     public int solution(int[] numbers) {
 
         Arrays.sort(numbers);
