@@ -3,24 +3,31 @@ import java.util.*;
 class 코테2차4번 {
     public int solution(int delay, int capacity, int[] times) {
         int answer = 0;
-        int currentTime = 0;
+        int currentProcess = delay;
         int currentQueue = 0;
 
         for (int time : times) {
-            currentTime += time;
-            int sent = currentTime / delay;
-
-            currentQueue = Math.max(0, currentQueue - sent);
-
-            if (currentQueue == capacity) {
-                answer += 1;
+            if(time < currentProcess) {
+                currentProcess -= time;
+                if(currentQueue == capacity) {
+                    answer++;
+                } else {
+                    currentQueue++;
+                }
+            } else if (time == currentProcess) {
+                currentProcess = delay;
             } else {
-                currentQueue += 1;
+                int maxSentFromQueue = (time - currentProcess) / delay;
+
+                if (currentQueue <= maxSentFromQueue) {
+                    currentProcess = delay;
+                    currentQueue = 0;
+                } else {
+                    currentProcess = delay - (time - currentProcess) % delay;
+                    currentQueue -= maxSentFromQueue;
+                }
             }
-
-            currentTime %= delay;
         }
-
         return answer;
     }
 }
