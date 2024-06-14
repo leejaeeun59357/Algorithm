@@ -11,6 +11,6 @@ class 코테2차1번 {
             }
         }
 
-        return -1;
+        return  -1;
     }
 }
