@@ -43,10 +43,17 @@ public class Main {
         if(visited[i]) {
             return;
         }
+        Stack<Integer> stack = new Stack<>();
+        stack.push(i);
         visited[i] = true;
-        for(int x : A[i]) {
-            if(!visited[x]) {
-                DFS(x);
+        
+        while(!stack.isEmpty()) {
+            int curNum = stack.pop();
+            for(int x : A[curNum]) {
+                if(!visited[x]) {
+                    visited[x] = true;
+                    stack.push(x);
+                }
             }
         }
     }
